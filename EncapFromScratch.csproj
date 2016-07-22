@@ -39,6 +39,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Settings.aiis" />
+    <None Include="Sprint.tstest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="TriggerInputs.tstest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -54,16 +57,23 @@
     </Compile>
     <Compile Include="Lib\BaseAutomation.cs" />
     <Compile Include="Lib\BaseUIElement.cs" />
+    <Compile Include="Lib\Datepicker.cs" />
     <Compile Include="Lib\Grid.cs" />
     <Compile Include="Lib\TestContext.cs" />
+    <Compile Include="Sprint.tstest.cs">
+      <DependentUpon>Sprint.tstest</DependentUpon>
+    </Compile>
     <Compile Include="TriggerInputs.tstest.cs">
       <DependentUpon>TriggerInputs.tstest</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Login.resx">
+    <None Include="Login.resx">
       <DependentUpon>Login.tstest</DependentUpon>
-    </EmbeddedResource>
+    </None>
+    <None Include="Sprint.resx">
+      <DependentUpon>Sprint.tstest</DependentUpon>
+    </None>
     <EmbeddedResource Include="TriggerInputs.resx">
       <DependentUpon>TriggerInputs.tstest</DependentUpon>
     </EmbeddedResource>

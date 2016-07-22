@@ -14,6 +14,9 @@ namespace EncapFromScratch.Lib
         {
             get
             {
+                if (TestContext.ActiveBrowser == null)
+                    throw new Exception("TestContext not set!");
+
                 return TestContext.ActiveBrowser;
             }
         }
